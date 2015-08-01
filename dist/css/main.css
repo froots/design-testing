@@ -1,4 +1,35 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: Helvetica, sans-serif;
+  font-size: 18px;
   color: #444;
+}
+
+.flag {
+    display: table;
+    width: 100%;
+}
+
+.flag__image,
+.flag__body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.flag__image {
+    padding-right: 10px;
+}
+
+.flag__image > img {
+    display: block;
+    max-width: none;
+}
+
+.flag__body {
+    width: 100%;
 }
