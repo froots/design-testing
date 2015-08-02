@@ -1,0 +1,3 @@
+Search component on mobile
+    http://localhost:8000/dist/styleguide/3.search.html    540x960
+        check test/visual/search.gspec --include "mobile,all" --exclude "toexclude"

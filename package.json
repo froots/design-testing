@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "galen check test/visual/search.gspec --url http://localhost:8000/dist/styleguide/3.search.html --size 540x960 --include='mobile,all' --exclude='toexclude' --htmlreport test/visual/report",
+    "test": "galen test test/visual/suite.test --htmlreport test/visual/report --parallel-tests 4",
     "posttest": "open test/visual/report/report.html",
     "pagedump": "galen dump test/visual/search.gspec --url http://localhost:8000/dist/styleguide/3.search.html --size=540x960 --export 'test/visual/dumps'",
     "postpagedump": "open test/visual/dumps/page.html"
