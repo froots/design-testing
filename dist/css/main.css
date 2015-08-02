@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -11,32 +12,6 @@ body {
   color: #444;
 }
 
-/* Flag */
-.flag {
-    display: table;
-    width: 100%;
-}
-
-.flag__image,
-.flag__body {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.flag__image {
-    padding-right: 10px;
-}
-
-.flag__image > img {
-    display: block;
-    max-width: none;
-}
-
-.flag__body {
-    width: 100%;
-}
-
-/* Search */
 .search {
   background-color: #f3f3f0;
   color: #777;
@@ -78,26 +53,4 @@ body {
   border: 0;
   color: #fff;
   font-weight: bold;
-}
-
-@media (min-width: 600px) {
-  .search__row {
-    position: relative;
-  }
-
-  .search__input,
-  .search__button {
-    display: inline-block;
-  }
-
-  .search__input {
-    width: 80%;
-  }
-
-  .search__button {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    width: 18.5%;
-  }
 }

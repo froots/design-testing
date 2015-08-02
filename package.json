@@ -1,17 +1,5 @@
 {
   "name": "design-testing",
   "version": "0.1.0",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "ci": "galen test test/visual/suite-ci.test --htmlreport test/visual/report --parallel-tests 1",
-    "test": "galen test test/visual/suite.test --htmlreport test/visual/report --parallel-tests 4",
-    "posttest": "open test/visual/report/report.html",
-    "pagedump": "galen dump test/visual/search.gspec --url http://localhost:8000/dist/styleguide/3.search.html --size=540x960 --export 'test/visual/dumps'",
-    "postpagedump": "open test/visual/dumps/page.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/froots/design-testing.git"
-  }
+  "description": ""
 }
