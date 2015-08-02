@@ -1,5 +1,8 @@
 {
   "name": "design-testing",
   "version": "0.1.0",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "test": "galen check test/visual/specs/search.gspec --url 'http://localhost:8000/dist/styleguide/search.html' --size '540x960' --htmlreport 'test/visual/report'"
+  }
 }
