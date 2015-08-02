@@ -1,0 +1,26 @@
+@objects
+    search      .search
+        label   .search__label
+        input   .search__input
+        button  .search__button
+
+= Main section =
+    @on mobile
+        search:
+            width 520px
+
+        search.label:
+            inside search 10px top, 10px left, 10px right
+            width 500px
+
+        search.input:
+            inside search 10px left, 10px right
+            width 500px
+            below search.label 8px
+            aligned vertically all search.label
+
+        search.button:
+            inside search 10px left, 10px right
+            width 500px
+            below search.input 8px
+            aligned vertically all search.label

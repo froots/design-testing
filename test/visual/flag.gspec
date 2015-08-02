@@ -1,5 +1,5 @@
 @objects
-    flag    id      styleguide-flag
+    flag    .flag
 
 = Main section =
     flag:
