@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "private": true,
+  "scripts": {
+    "test": "galen check test/visual/flag.gspec --url http://localhost:8000/dist/styleguide/2.flag.html --size 800x600 --htmlreport ."
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/froots/design-testing.git"

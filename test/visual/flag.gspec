@@ -1,0 +1,6 @@
+@objects
+    flag    id      styleguide-flag
+
+= Main section =
+    flag:
+        height 40px
