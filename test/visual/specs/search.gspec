@@ -1,0 +1,9 @@
+@objects
+    search      .search
+        label   .search__label
+        input   .search__input
+        button  .search__button
+
+= Main section =
+    search:
+        width 100% of viewport/width
