@@ -17,7 +17,7 @@
     @on mobile
         search:
             width 520px
-            image file reference/search.png
+            % image file reference/search.png, error 4%
 
         search.label:
             inside search 10px top, 10px left, 10px right
