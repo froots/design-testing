@@ -8,19 +8,23 @@
     @on mobile
         search:
             width 520px
+            image file reference/search.png
 
         search.label:
             inside search 10px top, 10px left, 10px right
             width 500px
+            css font-size is "16px"
 
         search.input:
             inside search 10px left, 10px right
             width 500px
             below search.label 8px
             aligned vertically all search.label
+            css font-size is "12px"
 
         search.button:
             inside search 10px left, 10px right
             width 500px
             below search.input 8px
             aligned vertically all search.label
+            css font-size is "12px"
