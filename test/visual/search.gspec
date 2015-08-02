@@ -4,6 +4,15 @@
         input   .search__input
         button  .search__button
 
+@rule should be an action button
+    css font-size is "12px"
+    css font-weight is "700"
+    css text-align is "center"
+    css padding-top is "8px"
+    css padding-right is "8px"
+    css padding-bottom is "8px"
+    css padding-left is "8px"
+
 = Main section =
     @on mobile
         search:
@@ -27,4 +36,4 @@
             width 500px
             below search.input 8px
             aligned vertically all search.label
-            css font-size is "12px"
+            | should be an action button
