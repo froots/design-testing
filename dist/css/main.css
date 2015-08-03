@@ -55,3 +55,25 @@ body {
   font-weight: bold;
   padding-top: 9px;
 }
+
+@media (min-width: 600px) {
+  .search__row {
+    position: relative;
+  }
+
+  .search__input,
+  .search__button {
+    display: inline-block;
+  }
+
+  .search__input {
+    width: 80%;
+  }
+
+  .search__button {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 18.5%;
+  }
+}
