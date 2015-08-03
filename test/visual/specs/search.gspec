@@ -5,23 +5,24 @@
         button  .search__button
 
 = Main section =
-    search:
-        width 100% of viewport/width
-        % image file ../reference/search-small.png, file ../reference/search-medium.png, file ../reference/search-large.png, error 5%
+    @on narrow_screen
+        search:
+            width 100% of viewport/width
+            % image file ../reference/search-small.png, file ../reference/search-medium.png, file ../reference/search-large.png, error 5%
 
-    search.label:
-        inside search 10px top, 10px left, 10px right
-        aligned vertically all search.button
-        aligned vertically all search.input
+        search.label:
+            inside search 10px top, 10px left, 10px right
+            aligned vertically all search.button
+            aligned vertically all search.input
 
-    search.input:
-        inside search 10px left, 10px right
-        aligned vertically all search.button
-        aligned vertically all search.label
-        below search.label 8px
+        search.input:
+            inside search 10px left, 10px right
+            aligned vertically all search.button
+            aligned vertically all search.label
+            below search.label 8px
 
-    search.button:
-        inside search 10px left, 10px right, 10px bottom
-        aligned vertically all search.input
-        aligned vertically all search.label
-        below search.input 8px
+        search.button:
+            inside search 10px left, 10px right, 10px bottom
+            aligned vertically all search.input
+            aligned vertically all search.label
+            below search.input 8px

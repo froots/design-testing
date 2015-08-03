@@ -5,4 +5,4 @@
     | phantomjs |
 Search component on ${browser}
     selenium ${browser} http://localhost:8000/dist/styleguide/search.html 540x960
-        check test/visual/specs/search.gspec
+        check test/visual/specs/search.gspec --include "narrow_screen"
