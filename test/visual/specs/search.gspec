@@ -7,7 +7,7 @@
 = Main section =
     search:
         width 100% of viewport/width
-        image file ../reference/search-small.png, file ../reference/search-medium.png, file ../reference/search-large.png, error 5%
+        % image file ../reference/search-small.png, file ../reference/search-medium.png, file ../reference/search-large.png, error 5%
 
     search.label:
         inside search 10px top, 10px left, 10px right

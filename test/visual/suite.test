@@ -1,11 +1,8 @@
-Search component on a small screen
-    http://localhost:8000/dist/styleguide/search.html 540x960
-        check test/visual/specs/search.gspec
-
-Search component on a medium screen
-    http://localhost:8000/dist/styleguide/search.html 1024x800
-        check test/visual/specs/search.gspec
-
-Search component on a large screen
-    http://localhost:8000/dist/styleguide/search.html 1280x960
+@@ parameterized
+    | browser   |
+    | firefox   |
+    | chrome    |
+    | phantomjs |
+Search component on ${browser}
+    selenium ${browser} http://localhost:8000/dist/styleguide/search.html 540x960
         check test/visual/specs/search.gspec
