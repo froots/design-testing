@@ -17,7 +17,7 @@ These instructions are currently for OS X only. They should also work for standa
 
 Clone this repository, then:
 
-`npm install -g galen-framework && npm install`
+`npm install -g galenframework-cli && npm install`
 
 ## Running tests
 
