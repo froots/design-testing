@@ -3,19 +3,16 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
+    "deploy:surge": "surge dist/ designtesting.surge.sh",
     "dump": "galen dump test/visual/specs/search.gspec --url 'http://localhost:8000/dist/styleguide/search.html' --size '540x960' --export 'test/visual/dumps/search-dump'",
     "postdump": "open test/visual/dumps/search-dump/page.html",
-
     "galen:all": "galen test test/visual/suite.test --htmlreport test/visual/report",
     "galen:spec": "galen check test/visual/specs/search.gspec --url 'http://localhost:8000/dist/styleguide/search.html' --size '540x960' --htmlreport 'test/visual/report'",
     "galen:quick": "galen test test/visual/headless.test --htmlreport test/visual/report",
     "postgalen:all": "npm run openreport",
-
     "test": "npm run serve & npm run galen:quick || true && killall node",
     "posttest": "npm run openreport",
-
     "openreport": "open test/visual/report/report.html",
-
     "serve": "http-server -p 8000 dist/"
   },
   "devDependencies": {
@@ -23,6 +20,7 @@
     "gulp": "^3.9.0",
     "gulp-connect": "^2.2.0",
     "gulp-galen": "^1.0.6",
-    "http-server": "^0.8.5"
+    "http-server": "^0.8.5",
+    "surge": "^0.17.3"
   }
 }
