@@ -1,9 +1,14 @@
 var gulp = require('gulp');
 var galen = require('gulp-galen');
 var connect = require('gulp-connect');
+var defaultsDeep = require('lodash.defaultsdeep');
+var surge = require('gulp-surge');
 
 var galenOptions = {
-  galenPath: './node_modules/.bin/galen'
+  galenPath: './node_modules/.bin/galen',
+  properties: {
+    baseUrl: 'http://localhost:8000/'
+  }
 };
 
 var connectOptions = {
@@ -12,11 +17,12 @@ var connectOptions = {
   livereload: false
 };
 
-function galenSuite(suitePath) {
+function galenSuite(suitePath, overrides) {
+  var options = defaultsDeep(overrides || {}, galenOptions);
   connect.server(connectOptions);
   return gulp
     .src(suitePath)
-    .pipe(galen.test(galenOptions))
+    .pipe(galen.test(options))
     .on('error', function() {
       connect.serverClose();
     })
@@ -25,10 +31,27 @@ function galenSuite(suitePath) {
     });
 }
 
-gulp.task('galen:headless', function() {
+gulp.task('deploy', function() {
+  return surge({
+    project: './dist',
+    domain: 'designtesting.surge.sh'
+  });
+});
+
+gulp.task('galen:quick', function() {
   return galenSuite('test/visual/headless.test');
 });
 
-gulp.task('galen:local', function() {
+gulp.task('galen:all', function() {
   return galenSuite('test/visual/suite.test');
 });
+
+gulp.task('galen:dist', function() {
+  return galenSuite('test/visual/suite.test', {
+    properties: {
+      baseUrl: 'http://designtesting.surge.sh/'
+    }
+  });
+});
+
+

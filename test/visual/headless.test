@@ -1,6 +1,3 @@
-@@ set
-  baseUrl http://localhost:8000/
-
 @@ table viewports
     | viewportName | tags          | size     |
     | narrow       | narrow_screen | 540x960  |
