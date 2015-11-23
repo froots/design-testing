@@ -2,7 +2,6 @@
     | browser   |
     | firefox   |
     | chrome    |
-    | phantomjs |
 
 @@ table viewports
     | viewportName | tags          | size     |

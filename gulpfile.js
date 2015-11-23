@@ -54,4 +54,14 @@ gulp.task('galen:dist', function() {
   });
 });
 
+gulp.task('galen:ci', function() {
+  return galenSuite('test/visual/saucelabs.test', {
+    properties: {
+      baseUrl: 'http://designtesting.surge.sh/',
+      sauceKey: process.env.SAUCE_KEY,
+      sauceUser: process.env.SAUCE_USER
+    }
+  });
+});
+
 
