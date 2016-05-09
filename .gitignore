@@ -1,3 +1,4 @@
 node_modules
 test/visual/report
 test/visual/dumps
+npm-debug.log

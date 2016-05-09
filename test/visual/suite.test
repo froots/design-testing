@@ -13,3 +13,9 @@
 Search component on ${browser} with ${viewportName} screen
     selenium ${browser} ${baseUrl}styleguide/search.html ${size}
         check test/visual/specs/search.gspec --include "${tags},all"
+
+@@ parameterized using browsers
+@@ parameterized using viewports
+Search flexbox component on ${browser} with ${viewportName} screen
+    selenium ${browser} ${baseUrl}styleguide/search-flexbox.html ${size}
+        check test/visual/specs/search-flexbox.gspec --include "${tags},all"
