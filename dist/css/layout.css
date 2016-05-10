@@ -11,3 +11,7 @@
 .nav--is-hidden {
   display: none;
 }
+
+.content-container {
+  padding: 10px;
+}

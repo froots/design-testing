@@ -4,6 +4,7 @@
     layoutContainer     .layout-container
     main                .main
         content         .content-container
+            title       h1
     nav                 .nav
         list            .nav__list
         item-*          .nav__item
@@ -25,3 +26,7 @@
         # We hide the nav initially for small screens using JavaScript
         nav:
             absent
+
+        main.content.title:
+            below header 10px
+            inside viewport 10px left, 10px right
