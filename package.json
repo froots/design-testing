@@ -2,6 +2,9 @@
   "name": "design-testing",
   "version": "0.1.0",
   "description": "",
+  "engines" : {
+    "node" : ">=4.0.0"
+  },
   "scripts": {
     "ci": "npm run galen:ci",
     "preci": "npm run deploy:surge",
