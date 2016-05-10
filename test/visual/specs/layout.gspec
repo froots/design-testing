@@ -1,0 +1,27 @@
+@objects
+    header              .header
+        title           .header__title
+    layoutContainer     .layout-container
+    main                .main
+        content         .content-container
+    nav                 .nav
+        list            .nav__list
+        item-*          .nav__item
+
+= Main section =
+    @on *
+        header:
+            width 100% of viewport/width
+            inside viewport 0px top, 0px left, 0px right
+
+        header.title:
+            inside header 10px top, 10px left
+
+        layoutContainer:
+            width 100% of viewport/width
+            inside viewport 0px left, 0px right
+
+    @on narrow_screen
+        # We hide the nav initially for small screens using JavaScript
+        nav:
+            absent

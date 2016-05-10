@@ -1,0 +1,13 @@
+.header {
+  background-color: #0ac;
+  color: white;
+  padding: 10px;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.nav--is-hidden {
+  display: none;
+}

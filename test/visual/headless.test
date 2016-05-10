@@ -4,6 +4,11 @@
     | wide         | wide_screen   | 1280x960 |
 
 @@ parameterized using viewports
-Search component on phantomjs with ${viewportName} screen
+Main layout without nav on phantomjs using ${viewportName} viewport
+    selenium phantomjs ${baseUrl}styleguide/layout.html ${size}
+        check test/visual/specs/layout.gspec --include "${tags},all"
+
+@@ parameterized using viewports
+Search form on phantomjs with ${viewportName} viewport
     selenium phantomjs ${baseUrl}styleguide/search.html ${size}
         check test/visual/specs/search.gspec --include "${tags},all"
