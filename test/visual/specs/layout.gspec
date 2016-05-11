@@ -1,6 +1,7 @@
 @objects
     header              .header
         title           .header__title
+        menuButton      .button--menu
     layoutContainer     .layout-container
     main                .main
         content         .content-container
@@ -21,14 +22,19 @@
             inside viewport 0px top, 0px left, 0px right
 
         header.title:
-            inside header ${commonMargin} top, ${commonMargin} left
+            inside header ${commonMargin} left
 
         layoutContainer:
             width 100% of viewport/width
             inside viewport 0px left, 0px right
 
     @on narrow_screen
-        # We hide the nav initially for small screens using JavaScript
+        # The menu button is displayed on small screens
+        header.menuButton:
+            inside header ${commonMargin} right
+            aligned horizontally centered header.title
+
+        # We hide the nav menu initially for small screens
         nav:
             absent
 

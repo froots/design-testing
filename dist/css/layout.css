@@ -2,10 +2,26 @@
   background-color: #0ac;
   color: white;
   padding: 1rem;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .header__title {
   margin: 0;
+}
+
+.button--menu {
+  border: 2px solid #fff;
 }
 
 .nav--is-hidden {

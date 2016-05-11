@@ -19,3 +19,12 @@ h1 {
 p {
   margin: 0 auto 1rem;
 }
+
+.button {
+  background-color: #0ac; 
+  border: 0;
+  border-radius: .3rem;
+  display: inline-block;
+  margin: 0;
+  padding: .5rem;
+}
