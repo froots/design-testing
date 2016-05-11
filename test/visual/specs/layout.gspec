@@ -14,6 +14,7 @@
 @set
     rem                 16px
     commonMargin        16px
+    approxMargin        ~ 16px
 
 = Main section =
     @on *
@@ -22,7 +23,7 @@
             inside viewport 0px top, 0px left, 0px right
 
         header.title:
-            inside header ${commonMargin} left
+            inside header ${approxMargin} left
 
         layoutContainer:
             width 100% of viewport/width
@@ -31,16 +32,16 @@
     @on narrow_screen
         # The menu button is displayed on small screens
         header.menuButton:
-            inside header ${commonMargin} right
-            aligned horizontally centered header.title
+            inside header ${approxMargin} right
+            aligned horizontally centered header.title 1px
 
         # We hide the nav menu initially for small screens
         nav:
             absent
 
         main.content.title:
-            below header ${commonMargin}
-            inside viewport ${commonMargin} left, ${commonMargin} right
+            below header ${approxMargin}
+            inside viewport ${approxMargin} left, ${approxMargin} right
 
         main.content.para-1:
-            below main.content.title ${commonMargin}
+            below main.content.title ${approxMargin}

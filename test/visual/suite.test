@@ -10,6 +10,12 @@
 
 @@ parameterized using browsers
 @@ parameterized using viewports
-Search component on ${browser} with ${viewportName} screen
+Search component on ${browser} with ${viewportName} viewport
     selenium ${browser} ${baseUrl}styleguide/search.html ${size}
         check test/visual/specs/search.gspec --include "${tags},all"
+
+@@ parameterized using browsers
+@@ parameterized using viewports
+Main layout without nav on ${browser} with ${viewportName} viewport
+    selenium ${browser} ${baseUrl}styleguide/layout.html ${size}
+        check test/visual/specs/layout.gspec --include "${tags},all"
