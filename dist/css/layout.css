@@ -38,7 +38,7 @@ body, html {
 
   .nav--is-activated {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, .15);
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 250px;
