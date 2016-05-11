@@ -31,3 +31,13 @@
 .content-container {
   padding: 1rem;
 }
+
+@media (min-width: 600px) {
+  .button--menu {
+    display: none;
+  }
+
+  .nav--is-hidden {
+    display: block;
+  }
+}

@@ -45,3 +45,12 @@
 
         main.content.para-1:
             below main.content.title ${approxMargin}
+
+    @on wide_screen
+        # The menu button is not displayed on large screens
+        header.menuButton:
+            absent
+
+        # The nav menu is visible on large screens
+        nav:
+            visible
