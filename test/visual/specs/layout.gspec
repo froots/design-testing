@@ -63,6 +63,13 @@
         header.menuButton:
             absent
 
-        # The nav menu is visible on large screens
+        # The nav menu is visible on large screens, to the left of the main content
         nav:
-            visible
+            below header 0px
+            inside viewport 0px left
+            width 250px
+
+        main:
+            right-of nav 0px
+            aligned horizontally top nav
+            inside viewport 0px right
