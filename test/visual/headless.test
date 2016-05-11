@@ -9,7 +9,7 @@ Main layout without nav on phantomjs using ${viewportName} viewport
         check test/visual/specs/layout.gspec --include "${tags},all"
 
 Main layout with nav on phantomjs using narrow viewport
-    selenium phantomjs ${baseUrl}styleguide/layout.html ${size}
+    selenium phantomjs ${baseUrl}styleguide/layout.html 540x960
         run test/visual/scripts/shownav.js
         check test/visual/specs/layout.gspec --include "narrow_screen_nav"
 

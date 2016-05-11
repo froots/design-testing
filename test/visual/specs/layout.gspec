@@ -49,7 +49,8 @@
     @on narrow_screen_nav
         # The nav is shown
         nav:
-            visible
+            inside viewport 0px top, 0px left
+            width 250px
 
     @on wide_screen
         # The menu button is not displayed on large screens
