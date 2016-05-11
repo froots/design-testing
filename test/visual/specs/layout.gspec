@@ -27,7 +27,7 @@
 
         layoutContainer:
             width 100% of viewport/width
-            inside viewport 0px left, 0px right
+            inside screen 0px left, 0px right
 
     @on narrow_screen
         # The menu button is displayed on small screens
@@ -45,6 +45,11 @@
 
         main.content.para-1:
             below main.content.title ${approxMargin}
+
+    @on narrow_screen_nav
+        # The nav is shown
+        nav:
+            visible
 
     @on wide_screen
         # The menu button is not displayed on large screens

@@ -10,12 +10,18 @@
 
 @@ parameterized using browsers
 @@ parameterized using viewports
-Search component on ${browser} with ${viewportName} viewport
-    selenium ${browser} ${baseUrl}styleguide/search.html ${size}
-        check test/visual/specs/search.gspec --include "${tags},all"
-
-@@ parameterized using browsers
-@@ parameterized using viewports
 Main layout without nav on ${browser} with ${viewportName} viewport
     selenium ${browser} ${baseUrl}styleguide/layout.html ${size}
         check test/visual/specs/layout.gspec --include "${tags},all"
+
+@@ parameterized using browsers
+Main layout with nav on ${browser} with wide viewport
+    selenium ${browser} ${baseUrl}styleguide/layout.html 540x960
+        run test/visual/scripts/shownav.js
+        check test/visual/specs/layout.gspec --include "narrow_screen_nav"
+
+@@ parameterized using browsers
+@@ parameterized using viewports
+Search component on ${browser} with ${viewportName} viewport
+    selenium ${browser} ${baseUrl}styleguide/search.html ${size}
+        check test/visual/specs/search.gspec --include "${tags},all"
