@@ -52,6 +52,12 @@
             inside viewport 0px top, 0px left
             width 250px
 
+        @forEach [nav.item-*] as navItem
+            ${navItem}:
+                height ~ 50px
+                width 250px
+                inside nav 0px left, 0px right
+
     @on wide_screen
         # The menu button is not displayed on large screens
         header.menuButton:
