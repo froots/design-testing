@@ -1,7 +1,7 @@
 .header {
   background-color: #0ac;
   color: white;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .header__title {
@@ -13,5 +13,5 @@
 }
 
 .content-container {
-  padding: 10px;
+  padding: 1rem;
 }

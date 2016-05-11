@@ -5,9 +5,14 @@
     main                .main
         content         .content-container
             title       h1
+            para-*      p
     nav                 .nav
         list            .nav__list
         item-*          .nav__item
+
+@set
+    rem                 16px
+    commonMargin        16px
 
 = Main section =
     @on *
@@ -16,7 +21,7 @@
             inside viewport 0px top, 0px left, 0px right
 
         header.title:
-            inside header 10px top, 10px left
+            inside header ${commonMargin} top, ${commonMargin} left
 
         layoutContainer:
             width 100% of viewport/width
@@ -28,5 +33,8 @@
             absent
 
         main.content.title:
-            below header 10px
-            inside viewport 10px left, 10px right
+            below header ${commonMargin}
+            inside viewport ${commonMargin} left, ${commonMargin} right
+
+        main.content.para-1:
+            below main.content.title ${commonMargin}
