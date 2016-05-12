@@ -1,12 +1,4 @@
-@@ table browsers
-    | browser   |
-    | firefox   |
-    | chrome    |
-
-@@ table viewports
-    | viewportName | tags          | size     |
-    | narrow       | narrow_screen | 540x960  |
-    | wide         | wide_screen   | 1280x960 |
+@@ import common.test
 
 @@ parameterized using browsers
 @@ parameterized using viewports
@@ -16,7 +8,7 @@ Main layout without nav on ${browser} with ${viewportName} viewport
 
 @@ parameterized using browsers
 Main layout with nav on ${browser} with wide viewport
-    selenium ${browser} ${baseUrl}styleguide/layout.html 540x960
+    selenium ${browser} ${baseUrl}styleguide/layout.html ${narrowDimensions}
         run test/visual/scripts/shownav.js
         check test/visual/specs/layout.gspec --include "narrow_screen_nav"
 

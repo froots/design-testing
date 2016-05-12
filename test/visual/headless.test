@@ -1,7 +1,4 @@
-@@ table viewports
-    | viewportName | tags          | size     |
-    | narrow       | narrow_screen | 540x960  |
-    | wide         | wide_screen   | 1280x960 |
+@@ import common.test
 
 @@ parameterized using viewports
 Main layout without nav on phantomjs using ${viewportName} viewport
@@ -9,7 +6,7 @@ Main layout without nav on phantomjs using ${viewportName} viewport
         check test/visual/specs/layout.gspec --include "${tags},all"
 
 Main layout with nav on phantomjs using narrow viewport
-    selenium phantomjs ${baseUrl}styleguide/layout.html 540x960
+    selenium phantomjs ${baseUrl}styleguide/layout.html ${narrowDimensions}
         run test/visual/scripts/shownav.js
         check test/visual/specs/layout.gspec --include "narrow_screen_nav"
 
