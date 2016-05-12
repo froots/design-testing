@@ -15,6 +15,7 @@
     rem                 16px
     commonMargin        16px
     approxMargin        ~ 16px
+    navWidth            250px
 
 = Main section =
     @on *
@@ -50,12 +51,12 @@
         # The nav is shown
         nav:
             inside viewport 0px top, 0px left
-            width 250px
+            width ${navWidth}
 
         @forEach [nav.item-*] as navItem
             ${navItem}:
                 height ~ 50px
-                width 250px
+                width ${navWidth}
                 inside nav 0px left, 0px right
 
     @on wide_screen
@@ -67,7 +68,7 @@
         nav:
             below header 0px
             inside viewport 0px left
-            width 250px
+            width ${navWidth}
 
         main:
             right-of nav 0px
