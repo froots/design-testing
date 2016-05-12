@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #444;
+}
+
+h1 {
+  margin: 0 auto 1rem;
+}
+
+p {
+  margin: 0 auto 1rem;
+}
+
+.button {
+  background-color: #0ac; 
+  border: 0;
+  border-radius: .3rem;
+  display: inline-block;
+  margin: 0;
+  padding: .5rem;
+}

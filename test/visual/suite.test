@@ -1,15 +1,19 @@
-@@ table browsers
-    | browser   |
-    | firefox   |
-    | chrome    |
-
-@@ table viewports
-    | viewportName | tags          | size     |
-    | narrow       | narrow_screen | 540x960  |
-    | wide         | wide_screen   | 1280x960 |
+@@ import common.test
 
 @@ parameterized using browsers
 @@ parameterized using viewports
-Search component on ${browser} with ${viewportName} screen
+Main layout without nav on ${browser} with ${viewportName} viewport
+    selenium ${browser} ${baseUrl}styleguide/layout.html ${size}
+        check test/visual/specs/layout.gspec --include "${tags},all"
+
+@@ parameterized using browsers
+Main layout with nav on ${browser} with wide viewport
+    selenium ${browser} ${baseUrl}styleguide/layout.html ${narrowDimensions}
+        run test/visual/scripts/shownav.js
+        check test/visual/specs/layout.gspec --include "narrow_screen_nav"
+
+@@ parameterized using browsers
+@@ parameterized using viewports
+Search component on ${browser} with ${viewportName} viewport
     selenium ${browser} ${baseUrl}styleguide/search.html ${size}
         check test/visual/specs/search.gspec --include "${tags},all"
