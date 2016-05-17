@@ -1,3 +1,5 @@
+@import common.gspec
+
 @objects
     header              .header
         title           .header__title
@@ -12,9 +14,6 @@
         item-*          .nav__item
 
 @set
-    rem                 16px
-    commonMargin        16px
-    approxMargin        ~ 16px
     navWidth            250px
 
 = Main section =
