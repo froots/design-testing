@@ -6,14 +6,11 @@
     "node" : ">=4.0.0"
   },
   "scripts": {
-    "ci": "npm run galen:ci",
-    "preci": "npm run deploy:surge",
-    "postci": "npm run openreport",
     "deploy:surge": "surge dist/ designtesting.surge.sh",
     "dump": "galen dump test/visual/specs/search.gspec --url 'http://localhost:8000/dist/styleguide/search.html' --size '540x960' --export 'test/visual/dumps/search-dump'",
     "postdump": "open test/visual/dumps/search-dump/page.html",
     "galen:all": "galen test test/visual/suite.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
-    "galen:ci": "galen test test/visual/saucelabs.test --htmlreport test/visual/report -DbaseUrl=http://designtesting.surge.sh/ -DsauceKey=$SAUCE_KEY -DsauceUser=$SAUCE_USER",
+    "galen:browserstack": "galen test test/visual/browserstack.test --htmlreport test/visual/report -DbaseUrl=http://designtesting.surge.sh/ -DbrowserStackKey=$BROWSERSTACK_KEY -DbrowserStackUser=$BROWSERSTACK_USER",
     "galen:dist": "galen test test/visual/suite.test --htmlreport test/visual/report -DbaseUrl=http://designtesting.surge.sh/",
     "galen:spec": "galen check test/visual/specs/search.gspec --url 'http://localhost:8000/dist/styleguide/search.html' --size '540x960' --htmlreport 'test/visual/report'",
     "galen:quick": "galen test test/visual/headless.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
@@ -21,6 +18,9 @@
     "test": "npm run serve & npm run galen:quick || true && killall node",
     "test:all": "npm run serve & npm run galen:all || true && killall node",
     "posttest": "npm run openreport",
+    "pretest:browserstack": "npm run deploy:surge",
+    "test:browserstack": "npm run galen:browserstack",
+    "posttest:browserstack": "npm run openreport",
     "openreport": "open test/visual/report/report.html",
     "serve": "http-server -p 8000 dist/"
   },
