@@ -3,10 +3,11 @@
     gridUrl http://${gridLogin}@ondemand.saucelabs.com:80/wd/hub
 
 @@ table desktopBrowsers
-    | browser   | gridArgs                                                                            |
+    | browser   | gridArgs                                                                              |
     | firefox   | --dc.browserName "firefox" --dc.version "45.0" --dc.platform "Windows 10"             |
     | chrome    | --dc.browserName "chrome" --dc.version "50.0" --dc.platform "Windows 10"              |
     | ie11      | --dc.browserName "internet explorer" --dc.version "11.103" --dc.platform "Windows 10" |
+    | safari    | --dc.browserName "safari" --dc.version "9.0" --dc.platform "OS X 10.11"               |
 
 @@ table mobileBrowsers
     | browser     | gridArgs                                                                                                                                                         |
