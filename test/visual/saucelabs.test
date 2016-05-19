@@ -4,10 +4,11 @@
 
 @@ table desktopBrowsers
     | browser   | gridArgs                                                                              |
-    | firefox   | --dc.browserName "firefox" --dc.version "45.0" --dc.platform "Windows 10"             |
-    | chrome    | --dc.browserName "chrome" --dc.version "50.0" --dc.platform "Windows 10"              |
-    | ie11      | --dc.browserName "internet explorer" --dc.version "11.103" --dc.platform "Windows 10" |
-    | safari    | --dc.browserName "safari" --dc.version "9.0" --dc.platform "OS X 10.11"               |
+    | Firefox   | --dc.browserName "firefox" --dc.version "45.0" --dc.platform "Windows 10"             |
+    | Chrome    | --dc.browserName "chrome" --dc.version "50.0" --dc.platform "Windows 10"              |
+    | IE11      | --dc.browserName "internet explorer" --dc.version "11.103" --dc.platform "Windows 10" |
+    | Safari    | --dc.browserName "safari" --dc.version "9.0" --dc.platform "OS X 10.11"               |
+    | MS Edge   | --dc.browserName "MicrosoftEdge" --dc.version "13.10586" --dc.platform "Windows 10"   |
 
 @@ table mobileBrowsers
     | browser     | gridArgs                                                                                                                                                         |
