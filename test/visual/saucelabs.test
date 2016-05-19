@@ -13,6 +13,7 @@
     | browser     | gridArgs                                                                                                                                                         |
     | iPhone 6    | --dc.browserName "iphone" --dc.version "9.2" --dc.deviceName "iPhone 6" --dc.platform "OS X 10.10" --dc.deviceOrientation "portrait"                             |
     | Android 5.1 | --dc.browserName "android" --dc.version "5.1" --dc.deviceName "Android Emulator" --dc.platform "Linux" --dc.deviceOrientation "portrait" --dc.deviceType "phone" |
+    | Galaxy S4   | --dc.browserName "android" --dc.version "4.4" --dc.deviceName "Samsung Galaxy S4 Emulator" --dc.platform "Linux" --dc.deviceOrientation "portrait"               |
 
 @@ table tabletBrowsers
     | browser     | gridArgs                                                                                                                                |
