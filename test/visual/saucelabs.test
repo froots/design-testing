@@ -4,18 +4,18 @@
 
 @@ table desktopBrowsers
     | browser   | gridArgs                                                                            |
-    | firefox   | --dc.browserName "firefox" --dc.version "42" --dc.platform "Windows 10"             |
-    | chrome    | --dc.browserName "chrome" --dc.version "46" --dc.platform "Windows 10"              |
-    | ie11      | --dc.browserName "internet explorer" --dc.version "11.0" --dc.platform "Windows 10" |
+    | firefox   | --dc.browserName "firefox" --dc.version "45.0" --dc.platform "Windows 10"             |
+    | chrome    | --dc.browserName "chrome" --dc.version "50.0" --dc.platform "Windows 10"              |
+    | ie11      | --dc.browserName "internet explorer" --dc.version "11.103" --dc.platform "Windows 10" |
 
 @@ table mobileBrowsers
-    | browser     | gridArgs                                                                                                                                 |
-    | iPhone 6    | --dc.browserName "iphone" --dc.version "9.1" --dc.deviceName "iPhone 6" --dc.platform "OS X 10.10" --dc.deviceOrientation "portrait"     |
-    | Android 4.4 | --dc.browserName "android" --dc.version "4.4" --dc.deviceName "Android Emulator" --dc.platform "Linux" --dc.deviceOrientation "portrait" |
+    | browser     | gridArgs                                                                                                                                                         |
+    | iPhone 6    | --dc.browserName "iphone" --dc.version "9.2" --dc.deviceName "iPhone 6" --dc.platform "OS X 10.10" --dc.deviceOrientation "portrait"                             |
+    | Android 5.1 | --dc.browserName "android" --dc.version "5.1" --dc.deviceName "Android Emulator" --dc.platform "Linux" --dc.deviceOrientation "portrait" --dc.deviceType "phone" |
 
 @@ table tabletBrowsers
     | browser     | gridArgs                                                                                                                                |
-    | iPad Air    | --dc.browserName "iphone" --dc.version "9.1" --dc.deviceName "iPad Retina" --dc.platform "OS X 10.10" --dc.deviceOrientation "portrait" |
+    | iPad Air    | --dc.browserName "iphone" --dc.version "9.2" --dc.deviceName "iPad Retina" --dc.platform "OS X 10.10" --dc.deviceOrientation "portrait" |
 
 @@ table viewports
     | viewportName | tags          | size     |
@@ -31,9 +31,31 @@ Search component on ${browser} with ${viewportName} screen
 @@ parameterized using mobileBrowsers
 Search component on ${browser}
     selenium grid ${gridUrl} --page ${baseUrl}styleguide/search.html ${gridArgs}
-        check test/visual/specs/search.gspec --include "narrow_screen"
+        check test/visual/specs/search.gspec --include "narrow_screen,all"
 
 @@ parameterized using tabletBrowsers
 Search component on ${browser}
     selenium grid ${gridUrl} --page ${baseUrl}styleguide/search.html ${gridArgs}
-        check test/visual/specs/search.gspec --include "wide_screen"
+        check test/visual/specs/search.gspec --include "wide_screen,all"
+
+@@ parameterized using desktopBrowsers
+@@ parameterized using viewports
+Main layout without nav on ${browser} with ${viewportName} screen
+    selenium grid ${gridUrl} --page ${baseUrl}styleguide/layout.html ${gridArgs} --size ${size}
+        check test/visual/specs/layout.gspec --include "${tags},all"
+
+@@ parameterized using mobileBrowsers
+Main layout without nav on ${browser}
+    selenium grid ${gridUrl} --page ${baseUrl}styleguide/layout.html ${gridArgs}
+        check test/visual/specs/layout.gspec --include "narrow_screen,all"
+
+@@ parameterized using tabletBrowsers
+Main layout without nav on ${browser}
+    selenium grid ${gridUrl} --page ${baseUrl}styleguide/layout.html ${gridArgs}
+        check test/visual/specs/layout.gspec --include "wide_screen,all"
+
+@@ parameterized using mobileBrowsers
+Main layout with nav on ${browser}
+    selenium grid ${gridUrl} --page ${baseUrl}styleguide/layout.html ${gridArgs}
+        run test/visual/scripts/shownav.js
+        check test/visual/specs/layout.gspec --include "narrow_screen_nav"
