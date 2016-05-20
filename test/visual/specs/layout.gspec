@@ -54,7 +54,7 @@
 
         @forEach [nav.item-*] as navItem
             ${navItem}:
-                height ~ 50px
+                height 45 to 55px
                 width ${navWidth}
                 inside nav 0px left, 0px right
 
@@ -65,7 +65,7 @@
 
         # The nav menu is visible on large screens, to the left of the main content
         nav:
-            below header 0px
+            below header ~ 0px
             inside viewport 0px left
             width ${navWidth}
 
