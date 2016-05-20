@@ -1,16 +1,3 @@
 @@ import common.test
-
-@@ parameterized using viewports
-Main layout without nav on phantomjs using ${viewportName} viewport
-    selenium phantomjs ${baseUrl}styleguide/layout.html ${size}
-        check test/visual/specs/layout.gspec --include "${tags},all"
-
-Main layout with nav on phantomjs using narrow viewport
-    selenium phantomjs ${baseUrl}styleguide/layout.html ${narrowDimensions}
-        run test/visual/scripts/shownav.js
-        check test/visual/specs/layout.gspec --include "narrow_screen_nav"
-
-@@ parameterized using viewports
-Search form on phantomjs with ${viewportName} viewport
-    selenium phantomjs ${baseUrl}styleguide/search.html ${size}
-        check test/visual/specs/search.gspec --include "${tags},all"
+@@ import browsers-headless.test
+@@ import tests.test

@@ -7,7 +7,7 @@
     | narrow       | narrow_screen | ${narrowDimensions} |
     | wide         | wide_screen   | ${wideDimensions}   |
 
-@@ table browsers
-    | browser   |
-    | firefox   |
-    | chrome    |
+@@ table components
+    | componentName | componentLabel |
+    | Search form   | search         |
+    | Main layout   | layout         |
