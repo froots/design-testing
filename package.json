@@ -24,12 +24,12 @@
     "test:all": "npm run serve & npm run galen:all || true && killall node",
     "posttest:all": "npm run openreport",
 
-    "pretest:browserstack": "npm run deploy:surge",
     "test:browserstack": "npm run galen:browserstack",
+    "pretest:browserstack": "npm run deploy:surge",
     "posttest:browserstack": "npm run openreport",
 
-    "pretest:saucelabs": "npm run deploy:surge",
     "test:saucelabs": "npm run galen:saucelabs",
+    "pretest:saucelabs": "npm run deploy:surge",
     "posttest:saucelabs": "npm run openreport"
   },
   "devDependencies": {

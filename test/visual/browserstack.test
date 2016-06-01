@@ -11,6 +11,7 @@
     | Chrome    | --dc.browser "Chrome" --dc.browser_version "50" --dc.os "WINDOWS" --dc.os_version "10"       |
     | IE11      | --dc.browser "IE" --dc.browser_version "11" --dc.os "WINDOWS" --dc.os_version "10"           |
     | Safari    | --dc.browser "Safari" --dc.browser_version "9.1" --dc.os "OS X" --dc.os_version "El Capitan" |
+    | MS Edge   | --dc.browser "Edge" --dc.browser_version "13" --dc.os "WINDOWS" --dc.os_versions "10"        |
 
 @@ table mobileBrowsers
     | browser                 | gridArgs                                                                                                   |
