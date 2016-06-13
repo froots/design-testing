@@ -24,6 +24,10 @@
     "test:all": "npm run serve & npm run galen:all || true && killall node",
     "posttest:all": "npm run openreport",
 
+    "test:dist": "npm run galen:dist",
+    "pretest:dist": "npm run deploy:surge",
+    "posttest:dist": "npm run openreport",
+
     "test:browserstack": "npm run galen:browserstack",
     "pretest:browserstack": "npm run deploy:surge",
     "posttest:browserstack": "npm run openreport",
