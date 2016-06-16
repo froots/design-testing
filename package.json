@@ -1,17 +1,26 @@
 {
   "name": "design-testing",
-  "version": "0.1.0",
-  "description": "",
+  "description": "Examples of design and layout testing using Galen Framework",
+  "author": {
+    "name": "Jim Newbery",
+    "email": "james@tinnedfruit.com",
+    "url": "http://tinnedfruit.com/"
+  },
+  "private": true,
   "engines" : {
     "node" : ">=4.0.0"
   },
+  "config": {
+    "surgeDomain": "designtesting.surge.sh",
+    "surgeBaseUrl": "-DbaseUrl=http://designtesting.surge.sh/"
+  },
   "scripts": {
-    "deploy:surge": "surge dist/ designtesting.surge.sh",
+    "deploy:surge": "surge dist/ $npm_package_config_surgeDomain",
 
     "galen:all": "galen test test/visual/suite.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
-    "galen:saucelabs": "galen test test/visual/saucelabs.test --htmlreport test/visual/report -DbaseUrl=http://designtesting.surge.sh/ -DsauceKey=$SAUCE_KEY -DsauceUser=$SAUCE_USER",
-    "galen:browserstack": "galen test test/visual/browserstack.test --htmlreport test/visual/report -DbaseUrl=http://designtesting.surge.sh/ -DbrowserStackKey=$BROWSERSTACK_KEY -DbrowserStackUser=$BROWSERSTACK_USER",
-    "galen:dist": "galen test test/visual/suite.test --htmlreport test/visual/report -DbaseUrl=http://designtesting.surge.sh/",
+    "galen:saucelabs": "galen test test/visual/saucelabs.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl -DsauceKey=$SAUCE_KEY -DsauceUser=$SAUCE_USER",
+    "galen:browserstack": "galen test test/visual/browserstack.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl -DbrowserStackKey=$BROWSERSTACK_KEY -DbrowserStackUser=$BROWSERSTACK_USER",
+    "galen:dist": "galen test test/visual/suite.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl",
     "galen:quick": "galen test test/visual/headless.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
 
     "openreport": "open test/visual/report/report.html",
@@ -25,15 +34,12 @@
     "posttest:all": "npm run openreport",
 
     "test:dist": "npm run galen:dist",
-    "pretest:dist": "npm run deploy:surge",
     "posttest:dist": "npm run openreport",
 
     "test:browserstack": "npm run galen:browserstack",
-    "pretest:browserstack": "npm run deploy:surge",
     "posttest:browserstack": "npm run openreport",
 
     "test:saucelabs": "npm run galen:saucelabs",
-    "pretest:saucelabs": "npm run deploy:surge",
     "posttest:saucelabs": "npm run openreport"
   },
   "devDependencies": {
