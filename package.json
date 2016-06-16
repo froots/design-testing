@@ -7,8 +7,8 @@
     "url": "http://tinnedfruit.com/"
   },
   "private": true,
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
   "config": {
     "surgeDomain": "designtesting.surge.sh",
@@ -16,29 +16,21 @@
   },
   "scripts": {
     "deploy:surge": "surge dist/ $npm_package_config_surgeDomain",
-
     "galen:all": "galen test test/visual/suite.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
     "galen:saucelabs": "galen test test/visual/saucelabs.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl -DsauceKey=$SAUCE_KEY -DsauceUser=$SAUCE_USER",
     "galen:browserstack": "galen test test/visual/browserstack.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl -DbrowserStackKey=$BROWSERSTACK_KEY -DbrowserStackUser=$BROWSERSTACK_USER",
     "galen:dist": "galen test test/visual/suite.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl",
     "galen:quick": "galen test test/visual/headless.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
-
     "openreport": "open test/visual/report/report.html",
-
     "serve": "http-server -p 8000 dist/",
-
     "test": "npm run serve & npm run galen:quick || true && killall node",
     "posttest": "npm run openreport",
-
     "test:all": "npm run serve & npm run galen:all || true && killall node",
     "posttest:all": "npm run openreport",
-
     "test:dist": "npm run galen:dist",
     "posttest:dist": "npm run openreport",
-
     "test:browserstack": "npm run galen:browserstack",
     "posttest:browserstack": "npm run openreport",
-
     "test:saucelabs": "npm run galen:saucelabs",
     "posttest:saucelabs": "npm run openreport"
   },
@@ -46,5 +38,6 @@
     "galenframework-cli": "^2.2.5",
     "http-server": "^0.9.0",
     "surge": "^0.18.0"
-  }
+  },
+  "version": "0.2.0"
 }
