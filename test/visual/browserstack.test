@@ -1,0 +1,28 @@
+@@ import common.test
+
+@@ set
+    gridLogin ${browserStackUser}:${browserStackKey}
+    gridUrl http://${gridLogin}@hub.browserstack.com/wd/hub
+    standardGridArgs --dc.project "Design Testing" --dc.resolution 1600x1200
+
+@@ table desktopBrowsers
+    | browser   | gridArgs                                                                                     |
+    | Firefox   | --dc.browser "Firefox" --dc.browser_version "46" --dc.os "WINDOWS" --dc.os_version "10"      |
+    | Chrome    | --dc.browser "Chrome" --dc.browser_version "50" --dc.os "WINDOWS" --dc.os_version "10"       |
+    | IE11      | --dc.browser "IE" --dc.browser_version "11" --dc.os "WINDOWS" --dc.os_version "10"           |
+    | Safari    | --dc.browser "Safari" --dc.browser_version "9.1" --dc.os "OS X" --dc.os_version "El Capitan" |
+    | MS Edge   | --dc.browser "Edge" --dc.browser_version "13" --dc.os "WINDOWS" --dc.os_versions "10"        |
+
+@@ table mobileBrowsers
+    | browser                 | gridArgs                                                                                                   |
+    | iPhone 6                | --dc.device "iPhone 6" --dc.os "ios" --dc.browser "iPhone" --dc.deviceOrientation "portrait"               |
+    | iPhone 5s               | --dc.device "iPhone 5S" --dc.os "ios" --dc.browser "iPhone" --dc.deviceOrientation "portrait"              |
+    | Google Nexus 5 / 5.0    | --dc.device "Google Nexus 5" --dc.os "android" --dc.browser "Android" --dc.deviceOrientation "portrait"    |
+    | Samsung Galaxy S5 / 4.4 | --dc.device "Samsung Galaxy S5" --dc.os "android" --dc.browser "Android" --dc.deviceOrientation "portrait" |
+
+@@ table tabletBrowsers
+    | browser     | gridArgs                                                                                                        |
+    | iPad Air 2  | --dc.device "iPad Air 2" --dc.os "ios" --dc.browser "iPad" --dc.deviceOrientation "portrait"                    |
+    | iPad Mini 2 | --dc.device "iPad Mini 2" --dc.os "ios" --dc.browser "iPad" --dc.deviceOrientation "portrait"                   |
+
+@@ import tests-selenium-grid.test
