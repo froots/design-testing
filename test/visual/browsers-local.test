@@ -2,3 +2,4 @@
     | browser   | browserGroups |
     | firefox   | desktop       |
     | chrome    | desktop       |
+    | safari    | desktop       |
