@@ -38,12 +38,7 @@
   },
   "devDependencies": {
     "galenframework-cli": "^2.2.5",
-    "gulp": "^3.9.1",
-    "gulp-connect": "^4.0.0",
-    "gulp-galen": "^1.1.1",
-    "gulp-surge": "^0.1.0",
     "http-server": "^0.9.0",
-    "lodash.defaultsdeep": "^4.3.5",
     "surge": "^0.18.0"
   }
 }
