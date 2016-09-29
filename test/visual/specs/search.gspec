@@ -24,13 +24,13 @@
             inside search 10px left, 10px right
             aligned vertically all search.button 1px
             aligned vertically all search.label 1px
-            below search.label 8px
+            below search.label 10px
 
         search.button:
             inside search 10px left, 10px right, 10px bottom
             aligned vertically all search.input 1px
             aligned vertically all search.label 1px
-            below search.input 8px
+            below search.input 10px
 
     @on wide_screen
         search.label:
@@ -40,7 +40,7 @@
         search.input:
             inside search 10px left, 10px bottom
             aligned horizontally all search.button 1px
-            below search.label 8px
+            below search.label 10px
 
         search.button:
-            right-of search.input 5 to 20 px
+            right-of search.input 10px

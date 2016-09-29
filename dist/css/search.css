@@ -7,7 +7,7 @@
 
 .search__label,
 .search__input {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .search__input,
@@ -17,7 +17,7 @@
   font-size: .75rem;
   outline: 0;
   overflow: hidden;
-  padding: 8px;
+  padding: 10px;
   width: 100%;
 }
 
@@ -43,28 +43,28 @@
   color: #fff;
   font-weight: bold;
   margin: 0;
-  padding-top: 9px;
+  padding-top: 10px;
 }
 
 @media (min-width: 600px) {
   .search__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: relative;
   }
 
-  .search__input,
-  .search__button {
-    display: inline-block;
-  }
-
   .search__input {
+    -webkit-box-flex: 4;
+        -ms-flex: 4 0px;
+            flex: 4 0px;
     margin-bottom: 0;
-    width: 80%;
   }
 
   .search__button {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 18.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0px;
+            flex: 1 0px;
+    margin-left: 10px;
   }
 }
