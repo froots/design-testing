@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/froots/design-testing.svg?branch=master)](https://travis-ci.org/froots/design-testing)
+
 # Galen Framework CSS testing examples
 
 This repository contains companion code and example tests for the book [Automated Testing for Web Designers](https://gumroad.com/l/Dgbv), available to buy now on Gumroad.
