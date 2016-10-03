@@ -19,7 +19,7 @@
     "galen:all": "galen test test/visual/suite.test --htmlreport test/visual/report -DbaseUrl=http://localhost:8000/",
     "galen:saucelabs:public": "galen test test/visual/saucelabs.test --htmlreport test/visual/report --parallel-tests 5 $npm_package_config_surgeBaseUrl -DsauceKey=$SAUCE_ACCESS_KEY -DsauceUser=$SAUCE_USERNAME -DgridDomain=ondemand.saucelabs.com -DgridPort=80",
     "galen:saucelabs:tunnel": "galen test test/visual/saucelabs.test --htmlreport test/visual/report --parallel-tests 5 -DbaseUrl=http://localhost:8000/ -DsauceKey=$SAUCE_ACCESS_KEY -DsauceUser=$SAUCE_USERNAME -DgridDomain=localhost -DgridPort=4445",
-    "galen:saucelabs:travis": "galen test test/visual/saucelabs.test --htmlreport test/visual/report --parallel-tests 5 -DbaseUrl=http://localhost:8000/ -DsauceKey=$SAUCE_ACCESS_KEY -DsauceUser=$SAUCE_USERNAME -DgridDomain=localhost -DgridPort=4445 -DtunnelId=$TRAVIS_JOB_NUMBER",
+    "galen:saucelabs:ci": "galen test test/visual/saucelabs.test --htmlreport test/visual/report --parallel-tests 5 -DbaseUrl=http://localhost:8000/ -DsauceKey=$SAUCE_ACCESS_KEY -DsauceUser=$SAUCE_USERNAME -DgridDomain=localhost -DgridPort=4445 -DtunnelId=$TRAVIS_JOB_NUMBER",
     "galen:browserstack": "galen test test/visual/browserstack.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl -DbrowserStackKey=$BROWSERSTACK_KEY -DbrowserStackUser=$BROWSERSTACK_USER",
     "galen:dist": "galen test test/visual/suite.test --htmlreport test/visual/report $npm_package_config_surgeBaseUrl",
     "galen:quick": "galen test test/visual/headless.test --htmlreport test/visual/report --parallel-tests 4 -DbaseUrl=http://localhost:8000/",
@@ -40,7 +40,7 @@
     "test:saucelabs:local": "npm run galen:saucelabs:tunnel",
     "posttest:saucelabs:local": "npm run openreport",
     "test:ci:quick": "npm run galen:quick",
-    "test:ci:saucelabs": "npm run galen:saucelabs:travis"
+    "test:ci:saucelabs": "npm run galen:saucelabs:ci"
   },
   "devDependencies": {
     "galenframework": "2.2.5",
