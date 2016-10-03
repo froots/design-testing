@@ -68,6 +68,16 @@ Each of the above tasks should open the test report once finished. You can run `
 
 Run `npm run` to see what other scripts are available.
 
+## TravisCI integration
+
+This project runs tests on PhantomJS via TravisCI. You can view the [build history on the Travis CI site](https://travis-ci.org/froots/design-testing).
+
+Galen reports are published to an S3 bucket. [Here's an example](http://design-testing-travis.s3-website-us-east-1.amazonaws.com/froots/design-testing/52/52.1/report.html) 
+
+It is also possible to run tests on Sauce Labs or Browserstack using TravisCI. Those tests take longer, so I've stuck with the PhantomJS tests for now.
+
+## Issues, feedback, etc.
+
 If you have problems getting set up, create an issue and I'll do my best to sort it out! I plan to extend and improve this repository as I develop the book further.
 
 Happy testing!
