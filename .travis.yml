@@ -17,5 +17,5 @@ script: npm run test:ci:quick
 addons:
   artifacts:
     paths:
-      - test/visual/report/**/*
-      - dist/**/*
+      - test/visual/report
+      - dist
