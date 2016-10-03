@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/froots/design-testing.svg?branch=master)](https://travis-ci.org/froots/design-testing)
+[![Build Status](https://travis-ci.org/froots/design-testing.svg?branch=master)](https://travis-ci.org/froots/design-testing) [![CircleCI](https://circleci.com/gh/froots/design-testing.svg?style=svg)](https://circleci.com/gh/froots/design-testing)
 
 # Galen Framework CSS testing examples
 
@@ -68,13 +68,22 @@ Each of the above tasks should open the test report once finished. You can run `
 
 Run `npm run` to see what other scripts are available.
 
-## TravisCI integration
+## Continuous integration services
 
-This project runs tests on PhantomJS via TravisCI. You can view the [build history on the Travis CI site](https://travis-ci.org/froots/design-testing).
+This project runs tests on PhantomJS via TravisCI and CircleCI. Both are good options for continuous integration.
 
-Galen reports are published to an S3 bucket. [Here's an example](http://design-testing-travis.s3-website-us-east-1.amazonaws.com/froots/design-testing/52/52.1/report.html) 
+* TravisCI 
+  * [Builds](https://travis-ci.org/froots/design-testing)
+  * [Example site](http://design-testing-travis.s3-website-us-east-1.amazonaws.com/froots/design-testing/52/52.1/index.html)
+  * [Example report](http://design-testing-travis.s3-website-us-east-1.amazonaws.com/froots/design-testing/52/52.1/report.html) - published to an S3 bucket
+* CircleCI
+  * [Builds](https://circleci.com/gh/froots/design-testing)
+  * [Example site](https://7-40051086-gh.circle-artifacts.com/0/home/ubuntu/design-testing/dist/index.html)
+  * [Example report](https://7-40051086-gh.circle-artifacts.com/0/home/ubuntu/design-testing/test/visual/report/report.html)
 
-It is also possible to run tests on Sauce Labs or Browserstack using TravisCI. Those tests take longer, so I've stuck with the PhantomJS tests for now.
+It is also possible to run tests on Sauce Labs or Browserstack. Those tests take longer, so I've stuck with the PhantomJS tests for now.
+
+For an example on how to use Travis with Sauce Labs, see the [alternative Travis config file](./.travis.yml__saucelabs).
 
 ## Issues, feedback, etc.
 

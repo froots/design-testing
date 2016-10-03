@@ -1,0 +1,9 @@
+test:
+  override:
+    - npm run serve:
+       background: true
+    - npm run test:ci:quick
+general:
+  artifacts:
+    - "test/visual/report"
+    - "dist"
