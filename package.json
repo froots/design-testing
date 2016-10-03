@@ -40,7 +40,8 @@
     "test:saucelabs:local": "npm run galen:saucelabs:tunnel",
     "posttest:saucelabs:local": "npm run openreport",
     "test:ci:quick": "npm run galen:quick",
-    "test:ci:saucelabs": "npm run galen:saucelabs:ci"
+    "test:ci:saucelabs": "npm run galen:saucelabs:ci",
+    "test:extras": "galen test test/visual/search.test.js --htmlreport test/visual/report"
   },
   "devDependencies": {
     "galenframework": "2.2.5",

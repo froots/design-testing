@@ -59,10 +59,11 @@ Running `npm run deploy:surge` will deploy the contents of the `dist/` directory
 You can run these NPM scripts to run tests in different configurations:
 
 * `npm test` - starts a local web server and runs tests using PhantomJS. This is the fastest test run.
-* `npm test:all` - starts a local web server and runs tests using the locally installed browsers listed in `test/visual/browsers-local.test`.
-* `npm test:dist` - runs tests using the same local browsers as `npm test:all`, but against the public Surge site.
-* `npm test:browserstack` - runs tests using BrowserStack instances specified in `test/visual/browserstack.test` against the public Surge site.
-* `npm test:saucelabs` - runs tests using Sauce Labs instances specified in `test/visual/saucelabs.test` against the public Surge site.
+* `npm run test:all` - starts a local web server and runs tests using the locally installed browsers listed in `test/visual/browsers-local.test`.
+* `npm run test:dist` - runs tests using the same local browsers as `npm test:all`, but against the public Surge site.
+* `npm run test:browserstack` - runs tests using BrowserStack instances specified in `test/visual/browserstack.test` against the public Surge site.
+* `npm run test:saucelabs` - runs tests using Sauce Labs instances specified in `test/visual/saucelabs.test` against the public Surge site.
+* `npm run test:extras` - an example of visual regression testing using Galen that generates reference images automatically. This uses the [Galen Bootstrap](https://github.com/galenframework/galen-bootstrap) addons.
 
 Each of the above tasks should open the test report once finished. You can run `npm run openreport` any time to open the report yourself.
 

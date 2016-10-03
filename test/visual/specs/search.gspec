@@ -4,6 +4,9 @@
         input   .search__input
         button  .search__button
 
+@groups
+    image_diff_validation   search.button
+
 = Main section =
     @on *
         search:
@@ -13,9 +16,6 @@
             inside search 10px top, 10px left, 10px right
 
     @on narrow_screen
-        search:
-            % image file ../reference/search-small.png, file ../reference/search-medium.png, file ../reference/search-large.png, error 5%
-
         search.label:
             aligned vertically all search.button 1px
             aligned vertically all search.input 1px
