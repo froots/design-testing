@@ -1,4 +1,4 @@
-@@ import common.test
+@@ import imports/common.test
 
 @@ set
     gridLogin ${browserStackUser}:${browserStackKey}
@@ -25,4 +25,4 @@
     | iPad Air 2  | --dc.device "iPad Air 2" --dc.os "ios" --dc.browser "iPad" --dc.deviceOrientation "portrait"                    |
     | iPad Mini 2 | --dc.device "iPad Mini 2" --dc.os "ios" --dc.browser "iPad" --dc.deviceOrientation "portrait"                   |
 
-@@ import tests-selenium-grid.test
+@@ import imports/tests-selenium-grid.test

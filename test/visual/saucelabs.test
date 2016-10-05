@@ -1,4 +1,4 @@
-@@ import common.test
+@@ import imports/common.test
 
 @@ set
     gridLogin ${sauceUser}:${sauceKey}
@@ -25,4 +25,4 @@
     | browser     | gridArgs                                                                                                                                |
     | iPad Air    | --dc.browserName "iphone" --dc.version "9.2" --dc.deviceName "iPad Retina" --dc.platform "OS X 10.10" --dc.deviceOrientation "portrait" |
 
-@@ import tests-selenium-grid.test
+@@ import imports/tests-selenium-grid.test
