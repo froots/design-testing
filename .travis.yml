@@ -13,7 +13,9 @@ before_install:
 before_script:
   - "npm run serve &"
   - "sleep 3"
-script: "if [ '$TRAVIS_EVENT_TYPE' == 'cron' ]; then npm run test:ci:saucelabs; else npm run test:ci:quick; fi"
+script:
+  - "echo $TRAVIS_EVENT_TYPE"
+  - "if [ $TRAVIS_EVENT_TYPE == 'cron' ]; then npm run test:ci:saucelabs; else npm run test:ci:quick; fi"
 addons:
   artifacts:
     paths:
