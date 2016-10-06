@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "4"
+before_install:
+  - "export PHANTOMJS_VERSION=2.1.1"
+  - "phantomjs --version"
+  - "export PATH=$PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin:$PATH"
+  - "phantomjs --version"
+  - "if [ $(phantomjs --version) != '$PHANTOMJS_VERSION' ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi"
+  - "if [ $(phantomjs --version) != '$PHANTOMJS_VERSION' ]; then wget https://github.com/Medium/phantomjs/releases/download/v$PHANTOMJS_VERSION/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2; fi"
+  - "if [ $(phantomjs --version) != '$PHANTOMJS_VERSION' ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi"
+  - "phantomjs --version"
+before_script:
+  - "npm run serve &"
+  - "sleep 3"
+script: "if [ '$TRAVIS_EVENT_TYPE' == 'cron' ]; then npm run test:ci:saucelabs; else npm run test:ci:quick; fi"
+addons:
+  artifacts:
+    paths:
+      - test/visual/report
+      - dist
+  sauce_connect:
+    username: design-testing
+    access_key:
+      secure: "RkN1iRWtB5YYk59MQAiunj9RfnW9Bv9MlKYlhlwFqAUO+9dG/WMvOPi1D8mu1Iggpcx6fopTlRAHMzGOqqPBdFXmFIQqr0dz0pvTJo2CtI5acMLSl931IJONnr+YUEGhLOgv06GCruZh7Bhkq/WU4XpYGJUUYYt/7Y+ryM1n1Lk+X7CX7+shUdRY/+YavyMgExICvtVtdpEC1xnGo7lPunfymm4y3Meni00ajB4pMw7sqnk3UdXxOb77FXBXHCUu2Hgtkj1nq/+dQrmnUi/7TxKpa5S4Ytg7yoY4CfNkG+qxAjOuqG0dEPMaTwafIg4SuuDvK3gP+rO4aL5COf/AV6IGFcN+ulCPI9j7njwe2ZdCwSRFOdjVjLiw1Hp4IiZXoN2D6Og1told8bxEoFVCw/7YxWwzj1v+V56oXXZwKQeYMfJWU1zziV0JOSFRiLb8PBm/7+vreNgGTVNy+Wym2fRmUdKCsLYGj3lYoSxR7jmAD86eQOw6UBvibL1pOtw7dMWZTnx66GM3gAwDUgcSvT48vRrzE0DgU3euVTsmiLFI5PaCQ0hYo7vZy7BLW+G9PgKb5Y52ks1bDOn8OzpPLyBP6rqVYGDAyTD25w4cdBes4WXY3m+6RhfZtBNu3LPLcxizrFrVzsazY/2NbYrDt2v3UiN68kz5B6R6vmZAwxI="
