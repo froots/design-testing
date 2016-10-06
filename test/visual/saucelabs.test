@@ -3,7 +3,7 @@
 @@ set
     gridLogin ${sauceUser}:${sauceKey}
     gridUrl http://${gridLogin}@${gridDomain}:${gridPort}/wd/hub
-    standardGridArgs
+    standardGridArgs --dc.tunnelIdentifier "${tunnelId}"
 
 @@ table desktopBrowsers
     | browser   | gridArgs                                                                              |
