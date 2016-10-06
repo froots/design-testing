@@ -8,8 +8,8 @@ script: npm run test:ci:saucelabs
 addons:
   artifacts:
     paths:
-      - test/visual/report/**/*
-      - dist/**/*
+      - test/visual/report
+      - dist
   sauce_connect:
     username: design-testing
     access_key:
