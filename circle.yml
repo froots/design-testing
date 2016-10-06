@@ -1,9 +1,10 @@
 test:
-  override:
+  pre:
     - npm run serve:
         background: true
     # Wait for app to be ready
     - curl --retry 10 --retry-delay 2 -v http://localhost:8000
+  override:
     - npm run test:ci:quick
 general:
   artifacts:
