@@ -43,4 +43,4 @@
             below search.label 10px
 
         search.button:
-            right-of search.input 10px
+            right-of search.input 9 to 10px
